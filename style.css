@@ -1,0 +1,20 @@
+html {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#calcbox {
+    align-self: center;
+
+}
+
+#display {
+    border: 3px solid white;
+    padding: 20px
+}
+
+#operands {
+    display: flex;
+}
