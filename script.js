@@ -119,3 +119,4 @@ backspace.addEventListener('click',function back(){
     currentinput = currentinput.slice(0,-1);
     display.textContent = currentinput
 })
+
