@@ -13,10 +13,19 @@ html {
     padding: 10px;
 }
 
-#display {
-    box-sizing: border-box;
+#display{
     border: 3px solid white;
-    padding: 10px;
+
+}
+
+#text {
+    box-sizing: border-box;
+    padding: 5px 15px;
+}
+
+#prevtxt {
+    box-sizing: border-box;
+    padding: 5px;
 }
 
 #clear {

@@ -66,15 +66,21 @@ let currentop = '';
 numberkeysnl.forEach(key => {
     key.addEventListener('click',()=>{
         currentinput += key.value;
-        display.textContent = currentinput;
+        if (previnput && currentop){
+            prevtxt.textContent = `${previnput} ${currentop}`;
+            display.textContent = currentinput;
+        } else {
+            display.textContent = currentinput;
+        }
     }) 
 });
 symbolsnl.forEach(key=>{
     key.addEventListener('click',()=>{
         if (key.value ===`=`){
            if ( previnput && currentinput && currentop){
+            prevtxt.textContent =`${previnput} ${currentop} ${currentinput}`
             currentinput = operation(previnput,currentop,currentinput)
-            display.textContent = currentinput
+            display.textContent = currentinput;
             previnput = '';
             currentop = '';
            }
@@ -93,4 +99,5 @@ clear.addEventListener('click',()=>{
     currentinput = '';
     currentop = '';
     previnput = '';
+    prevtxt.textContent = '';
 })
