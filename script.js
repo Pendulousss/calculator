@@ -24,16 +24,20 @@ extrakeys.forEach(element => {
 let clear = document.createElement("button");
 clear.id = 'clear';
 clear.textContent = `clear`;
-clear.style.width = '100px'
+clear.value = 'clear'
+clear.style.width = '75px'
+clear.style.height = '50px'
 funtionkeys.appendChild(clear);
 
 let backspace = document.createElement('button');
 backspace.id = `backspace`;
 backspace.textContent = `<-`;
-backspace.style.width = '100px'
+backspace.value = 'backspace'
+backspace.style.width = '75px'
+backspace.style.height = '50px'
 funtionkeys.appendChild(backspace)
 
-let operatorkeys = [`+`,`-`,`*`,`/`,`=`];
+let operatorkeys = [`+`,`-`,`*`,`/`,`^`,`=`];
 operatorkeys.forEach(element=>{
     let newbtn = document.createElement('button');
     newbtn.classList='symbols';
@@ -60,6 +64,7 @@ function operation(n,o,m){
     else if (o === `-`){result = subtract(n,m)}
     else if (o === `*`){result = multiply(n,m)}
     else if (o === `/`){result = divide(n,m)}
+    else if (o === `^`){result = exponentiate(n,m)}
     return result;
     }
 
@@ -83,7 +88,7 @@ numberkeysnl.forEach(key => {
     }) 
 });
 symbolsnl.forEach(key=>{
-    key.addEventListener('click',()=>{
+    key.addEventListener('click',function input(){
         if (key.value ===`=`){
            if ( previnput && currentinput && currentop){
             prevtxt.textContent =`${previnput} ${currentop} ${currentinput}`
@@ -102,7 +107,7 @@ symbolsnl.forEach(key=>{
     })
 
 
-clear.addEventListener('click',()=>{
+clear.addEventListener('click',function clear(){
     display.textContent = '';
     currentinput = '';
     currentop = '';
@@ -110,7 +115,7 @@ clear.addEventListener('click',()=>{
     prevtxt.textContent = '';
 })
 
-backspace.addEventListener('click',()=>{
+backspace.addEventListener('click',function back(){
     currentinput = currentinput.slice(0,-1);
     display.textContent = currentinput
 })

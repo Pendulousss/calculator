@@ -29,6 +29,7 @@ html {
     padding: 5px 15px;
     margin: 8px;
     text-align: right;
+    font-size: 20px;
 }
 
 #prevtxt {
@@ -98,8 +99,8 @@ body {
 
 #functionalkeys {
     display: flex;
-    justify-content: stretch;
-    align-self: center;
+    align-self: flex-start;
+    padding-left: 8px;
     margin-top: 165px;
 }
 
