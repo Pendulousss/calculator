@@ -6,29 +6,39 @@ html {
 }
 
 #calcbox {
+    border-radius: 10px;
     align-self: center;
     width: 300px;
-    height: 400px;
+    height: 450px;
     border: 3px solid white;
     padding: 10px;
 }
 
 #display{
+    box-sizing: border-box;
     border: 3px solid white;
-
+    border-radius: 5px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #text {
     box-sizing: border-box;
     padding: 5px 15px;
+    margin: 8px;
+    text-align: right;
 }
 
 #prevtxt {
     box-sizing: border-box;
-    padding: 5px;
+    padding: 5px 15px;
+    margin: 8px;
+    text-align: right;
 }
 
-#clear {
+#clear, #backspace {
     margin: 10px;
     height: 50px;
     width: 50px;
@@ -37,11 +47,14 @@ html {
 
 #allkeys {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
-
+#opkeys{
+    display: flex;
+    align-items: center;
+}
 
 #operands {
     display: flex;
@@ -49,7 +62,6 @@ html {
     padding: 10px;
     flex-basis: 250px;
     height: 100px;
-
 }
 
 #operators {
@@ -76,5 +88,30 @@ html {
     width: 50px;
     border: 2px solid white;
     background-color: aqua;
+    color: black;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+#functionalkeys {
+    display: flex;
+    justify-content: stretch;
+    align-self: center;
+    margin-top: 165px;
+}
+
+#eqbtn {
+    text-emphasis: bold;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    border: 2px solid white;
+    background-color: green;
     color: black;
 }

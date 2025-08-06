@@ -1,7 +1,8 @@
-const operands = document.querySelector("#operands");
+const operands = document.querySelector('#operands');
 const operators = document.querySelector('#operators')
 const display = document.querySelector('#text')
 const prevtxt = document.querySelector('#prevtxt')
+const funtionkeys = document.querySelector('#functionalkeys')
 
 for (let i=1;i<10;i++){
     let newbtn = document.createElement("button");
@@ -23,7 +24,14 @@ extrakeys.forEach(element => {
 let clear = document.createElement("button");
 clear.id = 'clear';
 clear.textContent = `clear`;
-operands.appendChild(clear);
+clear.style.width = '100px'
+funtionkeys.appendChild(clear);
+
+let backspace = document.createElement('button');
+backspace.id = `backspace`;
+backspace.textContent = `<-`;
+backspace.style.width = '100px'
+funtionkeys.appendChild(backspace)
 
 let operatorkeys = [`+`,`-`,`*`,`/`,`=`];
 operatorkeys.forEach(element=>{
@@ -100,4 +108,9 @@ clear.addEventListener('click',()=>{
     currentop = '';
     previnput = '';
     prevtxt.textContent = '';
+})
+
+backspace.addEventListener('click',()=>{
+    currentinput = currentinput.slice(0,-1);
+    display.textContent = currentinput
 })
