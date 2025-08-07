@@ -143,5 +143,6 @@ button:active {
     color: blue;
     text-align: center;
     font-size: xx-large;
-    margin: 4px 0px;
+    margin: 8px 0px;
+    text-decoration: dashed;
 }
