@@ -140,9 +140,8 @@ button:active {
 }
 
 #name {
-    color: blue;
+    color: rgb(2, 2, 23);
     text-align: center;
     font-size: xx-large;
     margin: 8px 0px;
-    text-decoration: dashed;
 }
